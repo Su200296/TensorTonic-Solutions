@@ -10,7 +10,7 @@ def t_test_one_sample(x: list, mu0: float) -> float:
     for i in range(len(x)):
       z.append(i)
     std = np.sqrt(np.sum((x-x_mean)**2)/(len(x)-1))
-    t = (x_mean - mu0) / (std / np.sqrt(len(x)))
+    t = float((x_mean - mu0) / (std / np.sqrt(len(x))))
 
     return float(t)
     pass
